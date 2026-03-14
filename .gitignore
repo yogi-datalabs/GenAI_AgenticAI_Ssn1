@@ -1,0 +1,28 @@
+# Virtual environment
+.venv/
+
+# Environment variables
+.env
+
+# PyCharm
+.idea/
+
+# Python cache
+__pycache__/
+*.pyc
+
+# Jupyter
+.ipynb_checkpoints/
+
+# Vector DB
+chroma_db/
+
+# Processed data
+data/processed/
+
+# Outputs
+outputs/
+
+# OS files
+.DS_Store
+Thumbs.db
