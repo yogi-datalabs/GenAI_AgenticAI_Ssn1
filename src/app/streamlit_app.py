@@ -33,6 +33,10 @@ if st.button("Get Answer") and query:
     # Retrieve relevant chunks
     #retrieved_docs = vector_db.similarity_search(query, k=3)
     retrieved_docs = vector_db.max_marginal_relevance_search(query, k=10, fetch_k=20)
+    # MMR first finds relevant chunks,
+    #then selects a subset that is both relevant AND diverse.
+    # MMR does semantic search first, but instead of taking the top results directly,
+    #it re-ranks them to avoid redundancy.
 
     context = "\n\n".join([doc.page_content for doc in retrieved_docs])
 
